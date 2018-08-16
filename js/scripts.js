@@ -11,9 +11,18 @@
 // }
 
 //Check if string has a number
-function hasNum(string) {
-  var regex = /\d/g;
-  return regex.test(string);
+// function hasNum(string) {
+//   var regex = /\d/g;
+//   return regex.test(string);
+// }
+
+function numGreater(string){
+  if (string > 3999){
+    return false;
+  } else {
+    return true;
+  }
+
 }
 
 
@@ -40,7 +49,8 @@ $(document).ready(function() {
     event.preventDefault();
     var userInput = $("#inputBox").val();
     var inputArray = userInput.split(" ");
-    alert(hasNum(userInput));
+    // alert(hasNum(userInput));
+    alert(numGreater(userInput));
     // var outputResult = eachNum(inputArray);
 
     // $(".output").text(outputResult);
